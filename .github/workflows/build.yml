@@ -33,6 +33,7 @@ jobs:
         with:
           target: ${{ matrix.config.target }}
           combine: true
+          args: -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
   package:
     name: Package Combined Binary
