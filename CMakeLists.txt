@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.21)
 
+# Allow legacy sub-dependencies (like result) to configure under CMake 4.x
+set(CMAKE_POLICY_VERSION_MINIMUM 3.5 CACHE STRING "" FORCE)
+
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
