@@ -1,0 +1,14 @@
+{
+    "geode": "3.0.0",
+    "version": "v1.0.0",
+    "id": "yourname.main_level_roulette",
+    "name": "Main Level Roulette",
+    "developer": "yourname",
+    "description": "Randomly shuffles the 22 main levels (Stereo Madness -> Dash). Reach 5% on a level to advance to the next one in the roulette.",
+    "gd": {
+        "win": "2.206",
+        "android": "2.206",
+        "mac": "2.206"
+    },
+    "dependencies": []
+}
