@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
 
-# Allow legacy sub-dependencies (like result) to configure under CMake 4.x
+# 1. Fix CMake 4.x policy issue with legacy sub-dependencies
 set(CMAKE_POLICY_VERSION_MINIMUM 3.5 CACHE STRING "" FORCE)
 
 set(CMAKE_CXX_STANDARD 20)
@@ -13,6 +13,9 @@ else()
 endif()
 
 project(MainLevelRoulette VERSION 1.0.0)
+
+# 2. Fix Clang 20 consteval error inside fmt library
+add_compile_definitions(FMT_USE_CONSTEXPR=0)
 
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp)
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
